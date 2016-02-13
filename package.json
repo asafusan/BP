@@ -1,0 +1,7 @@
+{
+  "name": "Big Panda Feed",
+  "version": "0.0.1",
+  "dependencies": {
+    "angular-md5": "^0.1.10"
+  }
+}

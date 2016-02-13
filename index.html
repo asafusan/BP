@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="BPFeed">
+<head>
+    <meta charset="UTF-8">
+    <title>Big Panda Feed</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+<main data-ng-controller="feedController as feedCtrl">
+    <!-- form for adding new feed items -->
+    <form ng-submit="handleFormSubmitted(email, content)">
+        <input type="email" name="email" data-ng-model="email" placeholder="Email" required/>
+        <textarea rows="4" name="content" placeholder="Message" data-ng-model="content" required></textarea>
+        <input type="submit" value="SUBMIT" />
+    </form>
+
+    <!-- feed section holding a ng-repeat to generate each feed item -->
+    <div class="feed">
+        <input type="text" placeholder="Filter" data-ng-model="userFilterInput"/>
+        <div class="message" data-ng-repeat="message in feedList | messageFilter:userFilterInput">
+            <img src="http://www.gravatar.com/avatar/{{message.gravatarHash}}"/>
+            <div class="message-details">
+                <div class="email">{{message.email}}</div>
+                <div class="content">{{message.content}}</div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+<script src="node_modules/angular-md5/angular-md5.min.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>

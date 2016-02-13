@@ -1,0 +1,66 @@
+body {
+  font-size: 12px;
+  background-color: #f9f9f9; }
+  body main {
+    display: inline-flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid #efefef;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px; }
+  body form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    padding: 20px;
+    background-color: #efefef; }
+    body form > * {
+      margin-bottom: 10px; }
+    body form input[type="email"] {
+      border: 1px solid #c7c7c7;
+      padding-left: 8px;
+      line-height: 2; }
+    body form textarea {
+      border: 1px solid #c7c7c7;
+      padding-left: 8px;
+      line-height: 2; }
+    body form input[type="submit"] {
+      align-self: flex-end;
+      background-color: #40A8DF;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 8px 16px;
+      font-weight: bold;
+      font-size: 12px; }
+  body .feed {
+    display: flex;
+    flex-direction: column;
+    padding: 20px; }
+    body .feed > input {
+      margin-bottom: 20px;
+      line-height: 2;
+      padding-left: 8px; }
+    body .feed .message {
+      display: flex;
+      margin-bottom: 20px; }
+      body .feed .message img {
+        width: 42px;
+        height: 42px;
+        margin-right: 8px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px; }
+      body .feed .message .message-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        font-size: 14px; }
+        body .feed .message .message-details .email {
+          font-weight: bold;
+          color: #505050; }
+        body .feed .message .message-details .content {
+          color: #868686; }
+
+/*# sourceMappingURL=app.css.map */
