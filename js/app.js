@@ -16,7 +16,7 @@ app.controller('feedController', ['$scope', 'md5', function ($scope, md5) {
 
     $scope.handleFormSubmitted = function (email, content) {
         // get path to relevant gravatar
-        var gravatarHash = 'http://www.gravatar.com/avatar/' + md5.createHash(generateModifiedEmail(email));
+        var gravatarHash = md5.createHash(generateModifiedEmail(email));
         // arrange data for new message
         var newMessage = {email: email, content: content, gravatarHash: gravatarHash};
 
